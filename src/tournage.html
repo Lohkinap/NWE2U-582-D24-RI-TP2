@@ -1,26 +1,104 @@
 <!doctype html>
-<html lang="fr-CA">
+<html lang="fr-CA" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title>tournage.html</title>
-
 		<meta name="description" content="" />
 
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
 
 		<link rel="stylesheet" href="styles/style.css" />
-		<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+
 		<script src="scripts/script.js" type="module" defer></script>
 	</head>
 
 	<body>
-		<div id="trivia"></div>
-		<div id="gallery"></div>
-		<div id="cast"></div>
+		<main>
+			<nav id="navbar" class="bg-white border-black border-b-2 w-full">
+				<div class="mx-auto px-6 max-w-6xl navbar">
+					<div class="flex-1">
+						<a class="font-bold text-3xl uppercase tracking-wider">Logo</a>
+					</div>
+
+					<div class="md:hidden flex-none">
+						<button class="rounded-lg scale-125 btn btn-square btn-ghost">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block stroke-current w-7 h-7">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+							</svg>
+						</button>
+					</div>
+
+					<div class="hidden md:flex flex-none">
+						<ul class="px-1 font-bold text-lg menu menu-horizontal">
+							<li><a href="index.html">Accueil</a></li>
+							<li><a href="tournage.html">Tournage</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<section id="trivia"></section>
+
+			<section id="gallery"></section>
+
+			<section id="cast" class="space-y-12 mx-auto px-6 py-16 max-w-6xl">
+				<div class="space-y-2 text-center">
+					<h2 class="font-bold text-4xl tracking-tight">Présentation de la direction artistique</h2>
+					<p class="mx-auto max-w-2xl text-gray-600">Dufka gir badipsa woohoo ne blousa. Hopple blitz shoona oofa glib baba.</p>
+				</div>
+
+				<div class="items-start gap-8 grid grid-cols-1 md:grid-cols-2">
+					<div class="collapse collapse-arrow bg-white border-2 border-black rounded-lg">
+						<input type="checkbox" />
+
+						<div class="collapse-title font-bold text-lg">Hooba va shoona kooj kondo ?</div>
+
+						<div class="collapse-content p-0">
+							<p class="px-4 pb-4 text-gray-600">Ba yipsee vitsu lukimazy arogaba zebanay ah pipty zow discufa arogaba zerpa blitz bileptu. Ongie choony foop meshka swoobie oosh. Kabuna fleeba noobie zow noobie bum boobasnot lukimazy.</p>
+						</div>
+					</div>
+
+					<div class="collapse collapse-arrow bg-white border-2 border-black rounded-lg">
+						<input type="checkbox" />
+
+						<div class="collapse-title font-bold text-lg">Yebsey fergoob mala sa mala awasa feebee ooba ?</div>
+
+						<div class="collapse-content p-0">
+							<p class="px-4 pb-4 text-gray-600">
+								Debool vou kooj kooj aut burb choony mekchate vendu. Smustle badipsa grouw meshka noobie vendu hooba vou nay charba nork gir frash kondo. Aw fleebs caba vanu oofa. Dwam nabe kana dabel snanna oh maboo snoz ne wetsul
+								kabuna shamoo.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="mt-8 border-black border-t-2 w-full">
+				<div class="mx-auto px-6 py-3 max-w-6xl">
+					<div class="flex md:flex-row flex-col md:justify-between items-center gap-4">
+						<div class="flex md:flex-row flex-col items-center gap-4 font-medium text-s">
+							<a href="tel:+8193761721" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-phone.png" alt="Téléphone" class="w-4 h-4" />(819) 376-1721 </a>
+							<a href="mailto:hello@cegeptr.qc.ca" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-mail.png" alt="Courriel" class="w-4 h-4" />hello@cegeptr.qc.ca </a>
+						</div>
+
+						<div class="flex md:flex-row flex-col items-center gap-4">
+							<span class="text-s">Jérémy Roy-Pelletier & Frédérick Lemieux</span>
+							<div class="flex items-center gap-2">
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-facebook-outline.svg" alt="Facebook" class="w-4 h-4" /></a>
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-linkedin-outline.svg" alt="Linkedin" class="w-4 h-4" /></a>
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-x-outline.svg" alt="X" class="w-4 h-4" /></a>
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-instagram-outline.svg" alt="Instagram" class="w-4 h-4" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</main>
 	</body>
 </html>
