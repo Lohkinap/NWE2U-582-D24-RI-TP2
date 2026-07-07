@@ -14,6 +14,8 @@ Réalisé par **Jérémy Roy-Pelletier** et **Frédérick Lemieux** dans le cadr
      - Accordeon: https://daisyui.com/components/accordion/#accordion-with-arrow-icon
      - Navbar: https://daisyui.com/components/navbar/#navbar-with-menu-and-submenu
 
+## Répartition des tâches
+
 ## Captures d'écran
 
 ### Desktop (1024px)
