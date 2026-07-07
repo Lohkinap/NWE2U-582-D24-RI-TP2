@@ -9,9 +9,10 @@ Réalisé par **Jérémy Roy-Pelletier** et **Frédérick Lemieux** dans le cadr
 
 ## Librairies, composants et animations
 
-- Tailwind-4.3: https://tailwindcss.com
-- DaisyUI-4.12.10: https://daisyui.com
+- Tailwind: https://tailwindcss.com
+- DaisyUI: https://daisyui.com
      - Accordeon: https://daisyui.com/components/accordion/#accordion-with-arrow-icon
+     - Carrousel : https://daisyui.com/components/carousel/#carousel-with-indicator-buttons
      - Navbar: https://daisyui.com/components/navbar/#navbar-with-menu-and-submenu
 
 ## Répartition des tâches
