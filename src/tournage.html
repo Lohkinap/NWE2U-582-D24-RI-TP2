@@ -7,21 +7,22 @@
 		<title>tournage.html</title>
 		<meta name="description" content="" />
 
-		<link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
-		<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
 
 		<link rel="stylesheet" href="styles/style.css" />
 
-		<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 
 		<script src="scripts/script.js" type="module" defer></script>
 	</head>
 
 	<body>
 		<main>
-			<nav id="navbar" class="bg-white border-black border-b-2 w-full">
-				<div class="mx-auto px-6 max-w-6xl navbar">
+			<div class="page__background"></div>
+			<nav id="navbar" class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 rounded-lg max-w-6xl">
+				<div class="px-6 navbar">
 					<div class="flex-1">
 						<a class="font-bold text-3xl uppercase tracking-wider">Logo</a>
 					</div>
@@ -43,36 +44,36 @@
 				</div>
 			</nav>
 
-			<section id="trivia" class="flex md:flex-row flex-col items-center gap-12 mx-auto px-6 py-16 max-w-6xl">
-				<div class="space-y-8 w-full md:w-1/2">
-					<div class="space-y-4 md:text-left text-center">
+			<section id="trivia" class="flex md:flex-row flex-col items-center gap-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl">
+				<div class="space-y-10 w-full md:w-1/2">
+					<div class="space-y-3 md:text-left text-center">
 						<h2 class="font-bold text-4xl tracking-tight">Faits divers</h2>
 						<p class="mx-auto md:mx-0 max-w-md text-gray-600">Baba flurze flee kipsy yarma zu noom nib seeta ah. Kana noom zaroo avoo flee. Gloopy delco oh ongie zurzoh hipta whipnow neib clops bweb squib smustle sato nork.</p>
 					</div>
 
-					<div class="gap-x-12 gap-y-10 grid grid-cols-2 pt-4">
-						<div class="space-y-1 md:text-left text-center">
+					<div class="gap-x-8 gap-y-8 grid grid-cols-2 pt-6">
+						<div class="space-y-2 md:text-left text-center">
 							<h3 class="font-bold text-5xl">0M</h3>
 							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Description</p>
 						</div>
 
-						<div class="space-y-1 md:text-left text-center">
+						<div class="space-y-2 md:text-left text-center">
 							<h3 class="font-bold text-5xl">0B</h3>
 							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Description</p>
 						</div>
 
-						<div class="space-y-1 md:text-left text-center">
+						<div class="space-y-2 md:text-left text-center">
 							<h3 class="font-bold text-5xl">0K</h3>
 							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Description</p>
 						</div>
 
-						<div class="space-y-1 md:text-left text-center">
+						<div class="space-y-2 md:text-left text-center">
 							<h3 class="font-bold text-5xl">0</h3>
 							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Description</p>
 						</div>
 					</div>
 
-					<div class="flex justify-center md:justify-start pt-4">
+					<div class="flex justify-center md:justify-start pt-6">
 						<a href="#" class="hover:bg-gray-50 px-8 py-4 border-2 border-black rounded-lg font-bold text-center transition-colors">En savoir plus</a>
 					</div>
 				</div>
@@ -82,7 +83,7 @@
 				</div>
 			</section>
 
-			<section id="gallery" class="mx-auto px-6 py-16 max-w-6xl">
+			<section id="gallery" class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl">
 				<div class="gap-6 grid grid-cols-1 md:grid-cols-3">
 					<div class="flex justify-center items-center bg-gray-200 border-2 border-black rounded-lg aspect-square">
 						<span class="text-gray-400"></span>
@@ -110,20 +111,20 @@
 				</div>
 			</section>
 
-			<section id="cast" class="space-y-12 mx-auto px-6 py-16 max-w-6xl">
-				<div class="space-y-2 text-center">
+			<section id="cast" class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl">
+				<div class="space-y-3 text-center">
 					<h2 class="font-bold text-4xl tracking-tight">Présentation de la direction artistique</h2>
 					<p class="mx-auto max-w-2xl text-gray-600">Dufka gir badipsa woohoo ne blousa. Hopple blitz shoona oofa glib baba.</p>
 				</div>
 
-				<div class="items-start gap-8 grid grid-cols-1 md:grid-cols-2">
+				<div class="items-start gap-6 grid grid-cols-1 md:grid-cols-2">
 					<div class="collapse collapse-arrow bg-white border-2 border-black rounded-lg">
 						<input type="checkbox" />
 
 						<div class="collapse-title font-bold text-lg">Hooba va shoona kooj kondo ?</div>
 
 						<div class="collapse-content p-0">
-							<p class="px-4 pb-4 text-gray-600">Ba yipsee vitsu lukimazy arogaba zebanay ah pipty zow discufa arogaba zerpa blitz bileptu. Ongie choony foop meshka swoobie oosh. Kabuna fleeba noobie zow noobie bum boobasnot lukimazy.</p>
+							<p class="px-6 pb-6 text-gray-600">Ba yipsee vitsu lukimazy arogaba zebanay ah pipty zow discufa arogaba zerpa blitz bileptu. Ongie choony foop meshka swoobie oosh. Kabuna fleeba noobie zow noobie bum boobasnot lukimazy.</p>
 						</div>
 					</div>
 
@@ -133,7 +134,7 @@
 						<div class="collapse-title font-bold text-lg">Yebsey fergoob mala sa mala awasa feebee ooba ?</div>
 
 						<div class="collapse-content p-0">
-							<p class="px-4 pb-4 text-gray-600">
+							<p class="px-6 pb-6 text-gray-600">
 								Debool vou kooj kooj aut burb choony mekchate vendu. Smustle badipsa grouw meshka noobie vendu hooba vou nay charba nork gir frash kondo. Aw fleebs caba vanu oofa. Dwam nabe kana dabel snanna oh maboo snoz ne wetsul
 								kabuna shamoo.
 							</p>
@@ -142,16 +143,16 @@
 				</div>
 			</section>
 
-			<footer class="mt-8 border-black border-t-2 w-full">
-				<div class="mx-auto px-6 py-3 max-w-6xl">
-					<div class="flex md:flex-row flex-col md:justify-between items-center gap-4">
-						<div class="flex md:flex-row flex-col items-center gap-4 font-medium text-s">
+			<footer class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 mb-6 rounded-lg max-w-6xl">
+				<div class="px-8 py-4">
+					<div class="flex md:flex-row flex-col md:justify-between items-center gap-6">
+						<div class="flex md:flex-row flex-col items-center gap-4 font-medium text-sm">
 							<a href="tel:+8193761721" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-phone.png" alt="Téléphone" class="w-4 h-4" />(819) 376-1721 </a>
 							<a href="mailto:hello@cegeptr.qc.ca" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-mail.png" alt="Courriel" class="w-4 h-4" />hello@cegeptr.qc.ca </a>
 						</div>
 
 						<div class="flex md:flex-row flex-col items-center gap-4">
-							<span class="text-s">Jérémy Roy-Pelletier & Frédérick Lemieux</span>
+							<span class="text-sm">Jérémy Roy-Pelletier & Frédérick Lemieux</span>
 							<div class="flex items-center gap-2">
 								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-facebook-outline.svg" alt="Facebook" class="w-4 h-4" /></a>
 								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-linkedin-outline.svg" alt="Linkedin" class="w-4 h-4" /></a>
