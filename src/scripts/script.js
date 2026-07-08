@@ -1,6 +1,9 @@
 // == [ LISTENER ] =============================================================
 
-document.addEventListener('DOMContentLoaded', initModal);
+document.addEventListener('DOMContentLoaded', () => {
+	initModal();
+	// initCarousel();
+});
 
 document.addEventListener('scroll', updateBackgroundPosition);
 document.addEventListener('resize', updateBackgroundPosition);
@@ -40,3 +43,24 @@ function initModal() {
 		if (event.key === 'Escape') closeModal();
 	});
 }
+
+// function initCarousel() {
+// 	const buttons = document.querySelectorAll('a[href^="#item"]');
+
+// 	buttons.forEach((button) => {
+// 		button.addEventListener('click', scrollToItem);
+// 	});
+// }
+
+// function scrollToItem(event) {
+// 	event.preventDefault();
+
+// 	const id = this.getAttribute('href');
+// 	const image = document.querySelector(id);
+// 	const container = image.parentElement;
+
+// 	container.scrollTo({
+// 		left: image.offsetLeft,
+// 		behavior: 'smooth',
+// 	});
+// }
