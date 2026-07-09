@@ -25,17 +25,22 @@ function initModal() {
 	const modalImage = document.getElementById('modalImage');
 	const modalExit = document.getElementById('modalExit');
 	const modalOverlay = document.getElementById('modalOverlay');
-
 	const images = document.querySelectorAll('#actors img, #media img, #facts img');
 
-	images.forEach((image) => {
-		image.addEventListener('click', () => {
-			modalImage.src = image.src;
-			modal.classList.remove('hidden');
-		});
-	});
+	const openModal = (src) => {
+		modalImage.src = src;
+		modal.classList.remove('hidden');
+		modal.classList.add('flex');
+	};
 
-	const closeModal = () => modal.classList.add('hidden');
+	const closeModal = () => {
+		modal.classList.add('hidden');
+		modal.classList.remove('flex');
+	};
+
+	images.forEach((image) => {
+		image.addEventListener('click', () => openModal(image.src));
+	});
 
 	modalExit.addEventListener('click', closeModal);
 	modalOverlay.addEventListener('click', closeModal);
