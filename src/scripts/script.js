@@ -3,7 +3,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 	initModal();
 	initCounters();
-	initChart();
 });
 
 document.addEventListener('scroll', updateBackgroundPosition);
