@@ -2,7 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 	initModal();
-	// initCarousel();
+	initCounters();
+	initChart();
 });
 
 document.addEventListener('scroll', updateBackgroundPosition);
@@ -42,4 +43,40 @@ function initModal() {
 	document.addEventListener('keydown', (event) => {
 		if (event.key === 'Escape') closeModal();
 	});
+}
+
+function initCounters() {
+	document.querySelectorAll('.counter').forEach((counter) => animateCounter(counter));
+}
+
+function animateCounter(element) {
+	const target = parseFloat(element.dataset.target);
+	const decimals = parseInt(element.dataset.decimals) || 0;
+	const suffix = element.dataset.suffix || '';
+
+	const STEPS = 120;
+	const INTERVAL = 3000 / STEPS;
+	const increment = target / STEPS;
+
+	let currentValue = 0;
+	let stepCount = 0;
+
+	const timer = setInterval(() => {
+		stepCount++;
+		currentValue += increment;
+
+		if (stepCount >= STEPS) {
+			currentValue = target;
+			clearInterval(timer);
+		}
+
+		element.textContent = formatCounterValue(currentValue, decimals) + suffix;
+	}, INTERVAL);
+}
+
+function formatCounterValue(value, decimals) {
+	if (decimals > 0) {
+		return value.toFixed(decimals).replace('.', ',');
+	}
+	return Math.round(value).toString();
 }
