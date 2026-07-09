@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	initModal();
 	initCounters();
+	updateBackgroundPosition();
 });
 
 document.addEventListener('scroll', updateBackgroundPosition);
