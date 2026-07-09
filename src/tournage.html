@@ -21,6 +21,7 @@
 	<body>
 		<main>
 			<div class="page__background"></div>
+
 			<nav id="navbar" class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 rounded-lg max-w-6xl">
 				<div class="items-center grid grid-cols-12 px-6 py-2">
 					<div class="col-span-6">
@@ -53,23 +54,20 @@
 
 					<div class="gap-x-8 gap-y-8 grid grid-cols-12 pt-6">
 						<div class="space-y-2 col-span-6 md:text-left text-center">
-							<h3 class="font-bold text-5xl">0M</h3>
-							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Description</p>
+							<p class="font-bold text-5xl counter" data-target="19" data-suffix="M">0</p>
+							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Budget</p>
 						</div>
-
 						<div class="space-y-2 col-span-6 md:text-left text-center">
-							<h3 class="font-bold text-5xl">0B</h3>
-							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Description</p>
+							<p class="font-bold text-5xl counter" data-target="398" data-suffix="M">0</p>
+							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Box-office mondial</p>
 						</div>
-
 						<div class="space-y-2 col-span-6 md:text-left text-center">
-							<h3 class="font-bold text-5xl">0K</h3>
-							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Description</p>
+							<p class="font-bold text-5xl counter" data-target="1.21" data-decimals="2">0</p>
+							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Gigowatts</p>
 						</div>
-
 						<div class="space-y-2 col-span-6 md:text-left text-center">
-							<h3 class="font-bold text-5xl">0</h3>
-							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Description</p>
+							<p class="font-bold text-5xl counter" data-target="88">0</p>
+							<p class="font-medium text-gray-500 text-xs uppercase tracking-wide">Miles par heure</p>
 						</div>
 					</div>
 
@@ -79,33 +77,33 @@
 				</div>
 
 				<div class="md:col-span-6 w-full">
-					<div class="bg-gray-200 border-2 border-black rounded-lg w-full aspect-square"></div>
+					<div class="bg-gray-200 rounded-lg w-full aspect-square"></div>
 				</div>
 			</section>
 
 			<section id="gallery" class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl">
 				<div class="gap-6 grid grid-cols-12">
-					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 border-2 border-black rounded-lg aspect-square">
+					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 rounded-lg aspect-square">
 						<span class="text-gray-400"></span>
 					</div>
 
-					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 border-2 border-black rounded-lg aspect-square">
+					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 rounded-lg aspect-square">
 						<span class="text-gray-400"></span>
 					</div>
 
-					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 border-2 border-black rounded-lg aspect-square">
+					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 rounded-lg aspect-square">
 						<span class="text-gray-400"></span>
 					</div>
 
-					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 border-2 border-black rounded-lg aspect-square">
+					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 rounded-lg aspect-square">
 						<span class="text-gray-400"></span>
 					</div>
 
-					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 border-2 border-black rounded-lg aspect-square">
+					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 rounded-lg aspect-square">
 						<span class="text-gray-400"></span>
 					</div>
 
-					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 border-2 border-black rounded-lg aspect-square">
+					<div class="flex justify-center items-center col-span-12 md:col-span-4 bg-gray-200 rounded-lg aspect-square">
 						<span class="text-gray-400"></span>
 					</div>
 				</div>
@@ -118,7 +116,7 @@
 				</div>
 
 				<div class="items-start gap-6 grid grid-cols-12">
-					<div class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white border-2 border-black rounded-lg">
+					<div class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg">
 						<input type="checkbox" />
 
 						<div class="collapse-title font-bold text-lg">Hooba va shoona kooj kondo ?</div>
@@ -128,7 +126,7 @@
 						</div>
 					</div>
 
-					<div class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white border-2 border-black rounded-lg">
+					<div class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg">
 						<input type="checkbox" />
 
 						<div class="collapse-title font-bold text-lg">Yebsey fergoob mala sa mala awasa feebee ooba ?</div>
@@ -153,6 +151,7 @@
 
 						<div class="flex md:flex-row flex-col md:justify-end items-center gap-4 md:col-span-6">
 							<span class="text-sm">Jérémy Roy-Pelletier & Frédérick Lemieux</span>
+
 							<div class="flex items-center gap-2">
 								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-facebook-outline.svg" alt="Facebook" class="w-4 h-4" /></a>
 								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-linkedin-outline.svg" alt="Linkedin" class="w-4 h-4" /></a>
@@ -163,6 +162,15 @@
 					</div>
 				</div>
 			</footer>
+
+			<div id="modal" class="hidden z-10 fixed inset-0 justify-center items-center p-4">
+				<div id="modalOverlay" class="absolute inset-0 bg-white/40 backdrop-blur-sm transition-opacity"></div>
+
+				<div class="relative bg-white shadow-2xl p-2 rounded-lg w-fit h-fit transition-all transform">
+					<button id="modalExit" class="hidden"></button>
+					<img id="modalImage" src="" class="rounded max-w-[70vw] max-h-[70vh] object-contain" />
+				</div>
+			</div>
 		</main>
 	</body>
 </html>

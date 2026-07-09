@@ -7,7 +7,7 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	opacity: 0.3;
+	opacity: 0.8;
 	z-index: -1;
 	pointer-events: none;
 	filter: blur(3px);
