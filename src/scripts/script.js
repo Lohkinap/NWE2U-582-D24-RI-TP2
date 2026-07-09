@@ -22,20 +22,35 @@ function updateBackgroundPosition() {
 
 function initModal() {
 	const modal = document.getElementById('modal');
+	const modalContent = document.getElementById('modalContent');
 	const modalImage = document.getElementById('modalImage');
 	const modalExit = document.getElementById('modalExit');
 	const modalOverlay = document.getElementById('modalOverlay');
-	const images = document.querySelectorAll('#actors img, #media img, #facts img');
+	const images = document.querySelectorAll('#actors img, #media img, #facts img, #hero img');
 
-	const openModal = (src) => {
-		modalImage.src = src;
+	const openModal = (source) => {
+		modalImage.src = source;
 		modal.classList.remove('hidden');
 		modal.classList.add('flex');
+		document.body.classList.add('overflow-hidden');
+
+		requestAnimationFrame(() => {
+			requestAnimationFrame(() => {
+				modalOverlay.classList.remove('opacity-0');
+				modalContent.classList.remove('opacity-0', 'scale-[0.3]');
+			});
+		});
 	};
 
 	const closeModal = () => {
-		modal.classList.add('hidden');
-		modal.classList.remove('flex');
+		modalOverlay.classList.add('opacity-0');
+		modalContent.classList.add('opacity-0', 'scale-[0.3]');
+
+		setTimeout(() => {
+			modal.classList.add('hidden');
+			modal.classList.remove('flex');
+			document.body.classList.remove('overflow-hidden');
+		}, 300);
 	};
 
 	images.forEach((image) => {
@@ -55,13 +70,13 @@ function initCounters() {
 }
 
 function animateCounter(element) {
-	const target = parseFloat(element.dataset.target);
-	const decimals = parseInt(element.dataset.decimals) || 0;
-	const suffix = element.dataset.suffix || '';
-
 	const STEPS = 120;
 	const INTERVAL = 3000 / STEPS;
+
+	const target = parseFloat(element.dataset.target);
 	const increment = target / STEPS;
+	const decimals = parseInt(element.dataset.decimals) || 0;
+	const suffix = element.dataset.suffix || '';
 
 	let currentValue = 0;
 	let stepCount = 0;
@@ -69,19 +84,13 @@ function animateCounter(element) {
 	const timer = setInterval(() => {
 		stepCount++;
 		currentValue += increment;
-
 		if (stepCount >= STEPS) {
 			currentValue = target;
 			clearInterval(timer);
 		}
 
-		element.textContent = formatCounterValue(currentValue, decimals) + suffix;
-	}, INTERVAL);
-}
+		const formattedValue = decimals > 0 ? currentValue.toFixed(decimals) : Math.round(currentValue).toString();
 
-function formatCounterValue(value, decimals) {
-	if (decimals > 0) {
-		return value.toFixed(decimals).replace('.', ',');
-	}
-	return Math.round(value).toString();
+		element.textContent = formattedValue + suffix;
+	}, INTERVAL);
 }
