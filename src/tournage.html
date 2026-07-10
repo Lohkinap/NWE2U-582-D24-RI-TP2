@@ -1,466 +1,239 @@
 <!doctype html>
 <html lang="fr-CA" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>tournage.html</title>
-    <meta name="description" content="" />
+		<title>tournage.html</title>
+		<meta name="description" content="" />
 
-    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="icons/favicon-32x32.png"
-    />
+		<link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
 
-    <link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/style.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 
-    <script src="scripts/script.js" type="module" defer></script>
-  </head>
+		<script src="scripts/script.js" type="module" defer></script>
+	</head>
 
-  <body>
-    <main>
-      <div class="page__background"></div>
+	<body>
+		<main>
+			<div class="page__background"></div>
 
-      <nav
-        id="navbar"
-        class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 rounded-lg max-w-6xl"
-      >
-        <div class="items-center grid grid-cols-12 mx-4 px-6 py-2">
-          <div class="col-span-6">
-            <a href="index.html"
-              ><img
-                src="assets/logo.svg"
-                alt="Logo du film Retour vers le Future"
-                class="drop-shadow-[0_6px_10px_#00000099] hover:drop-shadow-[0_10px_20px_#FF8C00B3] my-6 w-auto h-18 hover:scale-105 transition duration-300 cursor-pointer"
-            /></a>
-          </div>
+			<nav id="navbar" class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 rounded-lg max-w-6xl">
+				<div class="items-center grid grid-cols-12 mx-4 px-6 py-2">
+					<div class="col-span-6">
+						<a href="index.html">
+							<img src="assets/logo.svg" alt="Logo du film Retour vers le Future" class="drop-shadow-[0_6px_10px_#00000099] my-6 w-auto h-18 cursor-pointer logo__hover" />
+						</a>
+					</div>
 
-          <div class="md:hidden flex justify-end col-span-6">
-            <button
-              id="mobile-menu-btn"
-              class="rounded-lg scale-125 btn btn-square btn-ghost"
-              onclick="
-                document
-                  .getElementById('mobile-menu')
-                  .classList.toggle('hidden')
-              "
-            >
-              <img
-                src="assets/burger.svg"
-                alt="Ouvrir ou fermer le menu de navigation"
-                class="inline-block w-7 h-7"
-              />
-            </button>
-          </div>
+					<div class="md:hidden flex justify-end col-span-6">
+						<button id="mobile-menu-btn" class="rounded-lg scale-125 btn btn-square btn-ghost" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+							<img src="assets/burger.svg" alt="Ouvrir ou fermer le menu de navigation" class="inline-block w-7 h-7" />
+						</button>
+					</div>
 
-          <div class="hidden md:flex justify-end md:col-span-6">
-            <ul class="font-bold menu menu-horizontal">
-              <li><a href="index.html" class="px-4 text-2xl">Accueil</a></li>
-              <li>
-                <a href="tournage.html" class="px-4 text-2xl">Tournage</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+					<div class="hidden md:flex justify-end md:col-span-6">
+						<ul class="font-bold menu menu-horizontal">
+							<li><a href="index.html" class="px-4 text-2xl">Accueil</a></li>
+							<li><a href="tournage.html" class="px-4 text-2xl">Tournage</a></li>
+						</ul>
+					</div>
+				</div>
 
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-          <ul class="items-center w-full font-bold text-center menu">
-            <li class="w-full">
-              <a
-                href="index.html"
-                class="justify-center py-3 border-gray-400 border-b-2 text-2xl"
-                >Accueil</a
-              >
-            </li>
-            <li class="w-full">
-              <a href="tournage.html" class="justify-center py-3 text-2xl"
-                >Tournage</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
+				<div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+					<ul class="items-center w-full font-bold text-center menu">
+						<li class="w-full"><a href="index.html" class="justify-center py-3 border-gray-400 border-b-2 text-2xl">Accueil</a></li>
+						<li class="w-full"><a href="tournage.html" class="justify-center py-3 text-2xl">Tournage</a></li>
+					</ul>
+				</div>
+			</nav>
 
-      <section
-        id="trivia"
-        class="items-center gap-10 grid grid-cols-1 md:grid-cols-12 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl"
-      >
-        <div class="space-y-10 md:col-span-6 w-full">
-          <div class="space-y-3 md:text-left text-center">
-            <h2 class="font-bold text-4xl uppercase tracking-tight">
-              Faits divers
-            </h2>
-            <p class="mx-auto md:mx-0 max-w-md text-gray-600">
-              Détails sur le budget de production et les concepts scientifiques
-              qui ont défini le succès du film.
-            </p>
-          </div>
+			<section id="trivia" class="items-center gap-10 grid grid-cols-1 md:grid-cols-12 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl">
+				<div class="space-y-10 md:col-span-6 w-full">
+					<div class="space-y-3 md:text-left text-center">
+						<h2 class="font-bold text-4xl uppercase tracking-tight">Faits divers</h2>
+						<p class="mx-auto md:mx-0 max-w-md text-gray-600">Détails sur le budget de production et les concepts scientifiques qui ont défini le succès du film.</p>
+					</div>
 
-          <div class="gap-x-8 gap-y-8 grid grid-cols-12 pt-6">
-            <div class="space-y-2 col-span-6 md:text-left text-center">
-              <p
-                class="font-bold text-6xl text-center counter"
-                data-target="19"
-                data-suffix="M"
-              >
-                0
-              </p>
-              <p
-                class="font-medium text-gray-600 text-sm text-center uppercase tracking-wide"
-              >
-                Budget
-              </p>
-            </div>
+					<div class="gap-x-8 gap-y-8 grid grid-cols-12 pt-6">
+						<div class="space-y-2 col-span-6 md:text-left text-center">
+							<p class="font-bold text-6xl text-center counter" data-target="19" data-suffix="M">0</p>
+							<p class="font-medium text-gray-600 text-sm text-center uppercase tracking-wide">Budget</p>
+						</div>
 
-            <div class="space-y-2 col-span-6 md:text-left text-center">
-              <p
-                class="font-bold text-6xl text-center counter"
-                data-target="398"
-                data-suffix="M"
-              >
-                0
-              </p>
-              <p
-                class="font-medium text-gray-600 text-sm text-center uppercase tracking-wide"
-              >
-                Box-office mondial
-              </p>
-            </div>
+						<div class="space-y-2 col-span-6 md:text-left text-center">
+							<p class="font-bold text-6xl text-center counter" data-target="398" data-suffix="M">0</p>
+							<p class="font-medium text-gray-600 text-sm text-center uppercase tracking-wide">Box-office mondial</p>
+						</div>
 
-            <div class="space-y-2 col-span-6 md:text-left text-center">
-              <p
-                class="font-bold text-6xl text-center counter"
-                data-target="1.21"
-                data-decimals="2"
-              >
-                0
-              </p>
-              <p
-                class="font-medium text-gray-600 text-sm text-center uppercase tracking-wide"
-              >
-                Gigowatts
-              </p>
-            </div>
+						<div class="space-y-2 col-span-6 md:text-left text-center">
+							<p class="font-bold text-6xl text-center counter" data-target="1.21" data-decimals="2">0</p>
+							<p class="font-medium text-gray-600 text-sm text-center uppercase tracking-wide">Gigowatts</p>
+						</div>
 
-            <div class="space-y-2 col-span-6 md:text-left text-center">
-              <p
-                class="font-bold text-6xl text-center counter"
-                data-target="88"
-              >
-                0
-              </p>
-              <p
-                class="font-medium text-gray-600 text-sm text-center uppercase tracking-wide"
-              >
-                Miles par heure
-              </p>
-            </div>
-          </div>
+						<div class="space-y-2 col-span-6 md:text-left text-center">
+							<p class="font-bold text-6xl text-center counter" data-target="88">0</p>
+							<p class="font-medium text-gray-600 text-sm text-center uppercase tracking-wide">Miles par heure</p>
+						</div>
+					</div>
 
-          <div class="flex justify-center pt-6">
-            <a
-              href="https://fr.wikipedia.org/wiki/Retour_vers_le_futur"
-              target="_blank"
-              class="bg-white hover:bg-gray-700 px-8 py-4 rounded-lg font-bold text-black hover:text-white text-center hover:scale-102 transition-all duration-300 ease-in-out"
-            >
-              En savoir plus
-            </a>
-          </div>
-        </div>
+					<div class="flex justify-center pt-6">
+						<a
+							href="https://fr.wikipedia.org/wiki/Retour_vers_le_futur"
+							target="_blank"
+							class="bg-white hover:bg-gray-700 px-8 py-4 rounded-lg font-bold text-black hover:text-white text-center hover:scale-102 transition-all duration-300 ease-in-out"
+						>
+							En savoir plus
+						</a>
+					</div>
+				</div>
 
-        <div class="md:col-span-6 w-full">
-          <div
-            class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden"
-          >
-            <img
-              src="assets/trivia.jpg"
-              alt="Photo tournage Retour vers le Futur"
-              class="rounded-lg w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-            />
-          </div>
-        </div>
-      </section>
+				<div class="md:col-span-6 w-full">
+					<div class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden">
+						<img src="assets/trivia.jpg" alt="Photo tournage Retour vers le Futur" class="rounded-lg w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+					</div>
+				</div>
+			</section>
 
-      <section
-        id="media"
-        class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl"
-      >
-        <div class="space-y-4 text-center">
-          <h2 class="font-bold text-4xl uppercase tracking-tight">
-            Les coulisses
-          </h2>
+			<section id="media" class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl">
+				<div class="space-y-4 text-center">
+					<h2 class="font-bold text-4xl uppercase tracking-tight">Les coulisses</h2>
 
-          <p class="text-gray-600">
-            Sélection d'images de production, offrant un aperçu du travail
-            effectué en coulisses.
-          </p>
-        </div>
+					<p class="text-gray-600">Sélection d'images de production, offrant un aperçu du travail effectué en coulisses.</p>
+				</div>
 
-        <div class="gap-6 grid grid-cols-12">
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/behind-001.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+				<div class="gap-6 grid grid-cols-12">
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden">
+							<img src="assets/behind-001.jpg" alt="Gallery Image" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/behind-002.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden">
+							<img src="assets/behind-002.jpg" alt="Gallery Image" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/behind-003.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden">
+							<img src="assets/behind-003.jpg" alt="Gallery Image" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/behind-004.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden">
+							<img src="assets/behind-004.jpg" alt="Gallery Image" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/behind-005.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden">
+							<img src="assets/behind-005.jpg" alt="Gallery Image" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/behind-006.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden">
+							<img src="assets/behind-006.jpg" alt="Gallery Image" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <section
-        id="cast"
-        class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl"
-      >
-        <div class="space-y-3 text-center">
-          <h2 class="font-bold text-4xl uppercase tracking-tight">
-            Foire aux questions
-          </h2>
-          <p class="mx-auto max-w-2xl text-gray-600">
-            Réponses aux questions fréquemment posées.
-          </p>
-        </div>
+			<section id="cast" class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl">
+				<div class="space-y-3 text-center">
+					<h2 class="font-bold text-4xl uppercase tracking-tight">Foire aux questions</h2>
+					<p class="mx-auto max-w-2xl text-gray-600">Réponses aux questions fréquemment posées.</p>
+				</div>
 
-        <div class="items-start gap-6 grid grid-cols-12">
-          <div
-            class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg"
-          >
-            <input type="checkbox" />
+				<div class="items-start gap-6 grid grid-cols-12">
+					<div class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg">
+						<input type="checkbox" />
 
-            <div class="collapse-title font-bold text-lg">
-              Pourquoi une DeLorean ?
-            </div>
+						<div class="collapse-title font-bold text-lg">Pourquoi une DeLorean ?</div>
 
-            <div class="collapse-content p-0">
-              <p class="px-6 pb-6 text-gray-600">
-                Le Doc déclare avec humour que « quitte à construire une machine
-                à voyager dans le temps au volant d'une voiture, autant en avoir
-                une qui ait de la gueule ! ». Au-delà de l'esthétique, la
-                carrosserie en acier inoxydable de la DeLorean était nécessaire
-                à la dissipation du flux lors du processus de voyage temporel.
-              </p>
-            </div>
-          </div>
+						<div class="collapse-content p-0">
+							<p class="px-6 pb-6 text-gray-600">
+								Le Doc déclare avec humour que « quitte à construire une machine à voyager dans le temps au volant d'une voiture, autant en avoir une qui ait de la gueule ! ». Au-delà de l'esthétique, la carrosserie en acier
+								inoxydable de la DeLorean était nécessaire à la dissipation du flux lors du processus de voyage temporel.
+							</p>
+						</div>
+					</div>
 
-          <div
-            class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg"
-          >
-            <input type="checkbox" />
+					<div class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg">
+						<input type="checkbox" />
 
-            <div class="collapse-title font-bold text-lg">
-              Comment fonctionne le convecteur temporel ?
-            </div>
+						<div class="collapse-title font-bold text-lg">Comment fonctionne le convecteur temporel ?</div>
 
-            <div class="collapse-content p-0">
-              <p class="px-6 pb-6 text-gray-600">
-                Le convecteur temporel est ce qui permet de voyager dans le
-                temps. Il nécessite 1,21 gigowatt d'électricité pour
-                fonctionner, une puissance qui, en 1985, ne pouvait être générée
-                que par un éclair ou une réaction nucléaire au plutonium.
-              </p>
-            </div>
-          </div>
+						<div class="collapse-content p-0">
+							<p class="px-6 pb-6 text-gray-600">
+								Le convecteur temporel est ce qui permet de voyager dans le temps. Il nécessite 1,21 gigowatt d'électricité pour fonctionner, une puissance qui, en 1985, ne pouvait être générée que par un éclair ou une réaction
+								nucléaire au plutonium.
+							</p>
+						</div>
+					</div>
 
-          <div
-            class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg"
-          >
-            <input type="checkbox" />
+					<div class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg">
+						<input type="checkbox" />
 
-            <div class="collapse-title font-bold text-lg">
-              Pourquoi une vitesse de 88 mph ?
-            </div>
+						<div class="collapse-title font-bold text-lg">Pourquoi une vitesse de 88 mph ?</div>
 
-            <div class="collapse-content p-0">
-              <p class="px-6 pb-6 text-gray-600">
-                La DeLorean doit atteindre une vitesse de 88 mph (environ 142
-                km/h) pour activer le convecteur temporel. Cette vitesse
-                spécifique permet au véhicule d'atteindre la densité énergétique
-                nécessaire pour briser le continuum espace-temps.
-              </p>
-            </div>
-          </div>
+						<div class="collapse-content p-0">
+							<p class="px-6 pb-6 text-gray-600">
+								La DeLorean doit atteindre une vitesse de 88 mph (environ 142 km/h) pour activer le convecteur temporel. Cette vitesse spécifique permet au véhicule d'atteindre la densité énergétique nécessaire pour briser le
+								continuum espace-temps.
+							</p>
+						</div>
+					</div>
 
-          <div
-            class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg"
-          >
-            <input type="checkbox" />
+					<div class="collapse collapse-arrow col-span-12 md:col-span-6 bg-white rounded-lg">
+						<input type="checkbox" />
 
-            <div class="collapse-title font-bold text-lg">
-              Changer le passé réécrit-il le futur ?
-            </div>
+						<div class="collapse-title font-bold text-lg">Changer le passé réécrit-il le futur ?</div>
 
-            <div class="collapse-content p-0">
-              <p class="px-6 pb-6 text-gray-600">
-                Oui. Lorsque Marty parvient à faire en sorte que ses parents
-                tombent amoureux, il retourne dans une version de 1985 où sa
-                famille est plus épanouie et prospère. Le film repose sur le
-                principe que le futur n'est pas écrit ; c'est un état fluide
-                façonné par les actions entreprises dans le passé.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+						<div class="collapse-content p-0">
+							<p class="px-6 pb-6 text-gray-600">
+								Oui. Lorsque Marty parvient à faire en sorte que ses parents tombent amoureux, il retourne dans une version de 1985 où sa famille est plus épanouie et prospère. Le film repose sur le principe que le futur n'est pas
+								écrit ; c'est un état fluide façonné par les actions entreprises dans le passé.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <footer
-        class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 mb-6 rounded-lg max-w-6xl"
-      >
-        <div class="px-8 py-4">
-          <div
-            class="items-center gap-1 md:gap-6 grid grid-cols-1 md:grid-cols-12"
-          >
-            <div
-              class="flex md:flex-row flex-col items-center gap-1 md:gap-4 md:col-span-6 font-medium text-sm"
-            >
-              <a
-                href="tel:+8193761721"
-                class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"
-              >
-                <img
-                  src="assets/icon-phone.png"
-                  alt="Téléphone"
-                  class="w-4 h-4"
-                />(819) 376-1721
-              </a>
-              <a
-                href="mailto:hello@cegeptr.qc.ca"
-                class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"
-              >
-                <img
-                  src="assets/icon-mail.png"
-                  alt="Courriel"
-                  class="w-4 h-4"
-                />hello@cegeptr.qc.ca
-              </a>
-            </div>
-            <div
-              class="flex md:flex-row flex-col md:justify-end items-center gap-1 md:gap-4 md:col-span-6"
-            >
-              <span class="text-sm"
-                >Jérémy Roy-Pelletier & Frédérick Lemieux</span
-              >
-              <div class="flex items-center gap-2">
-                <a href="#" class="hover:opacity-60 transition-opacity"
-                  ><img
-                    src="assets/icon-facebook-outline.svg"
-                    alt="Facebook"
-                    class="w-5 h-5"
-                /></a>
-                <a href="#" class="hover:opacity-60 transition-opacity"
-                  ><img
-                    src="assets/icon-linkedin-outline.svg"
-                    alt="Linkedin"
-                    class="w-5 h-5"
-                /></a>
-                <a href="#" class="hover:opacity-60 transition-opacity"
-                  ><img src="assets/icon-x-outline.svg" alt="X" class="w-5 h-5"
-                /></a>
-                <a href="#" class="hover:opacity-60 transition-opacity"
-                  ><img
-                    src="assets/icon-instagram-outline.svg"
-                    alt="Instagram"
-                    class="w-5 h-5"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+			<footer class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 mb-6 rounded-lg max-w-6xl">
+				<div class="px-8 py-4">
+					<div class="items-center gap-1 md:gap-6 grid grid-cols-1 md:grid-cols-12">
+						<div class="flex md:flex-row flex-col items-center gap-1 md:gap-4 md:col-span-6 font-medium text-sm">
+							<a href="tel:+8193761721" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-phone.png" alt="Téléphone" class="w-4 h-4" />(819) 376-1721 </a>
+							<a href="mailto:hello@cegeptr.qc.ca" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-mail.png" alt="Courriel" class="w-4 h-4" />hello@cegeptr.qc.ca </a>
+						</div>
+						<div class="flex md:flex-row flex-col md:justify-end items-center gap-1 md:gap-4 md:col-span-6">
+							<span class="text-sm">Jérémy Roy-Pelletier & Frédérick Lemieux</span>
+							<div class="flex items-center gap-2">
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-facebook-outline.svg" alt="Facebook" class="w-5 h-5" /></a>
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-linkedin-outline.svg" alt="Linkedin" class="w-5 h-5" /></a>
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-x-outline.svg" alt="X" class="w-5 h-5" /></a>
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-instagram-outline.svg" alt="Instagram" class="w-5 h-5" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 
-      <div
-        id="modal"
-        class="hidden z-10 fixed inset-0 justify-center items-center p-4"
-      >
-        <div
-          id="modalOverlay"
-          class="absolute inset-0 bg-white/0 opacity-0 backdrop-blur-sm transition-opacity duration-700"
-        ></div>
+			<div id="modal" class="hidden z-10 fixed inset-0 justify-center items-center p-4">
+				<div id="modalOverlay" class="absolute inset-0 bg-white/0 opacity-0 backdrop-blur-sm transition-opacity duration-700"></div>
 
-        <div
-          id="modalContent"
-          class="relative bg-white opacity-0 shadow-2xl p-2 rounded-lg w-fit h-fit scale-[0.3] transition-all duration-300 transform"
-        >
-          <button id="modalExit" class="hidden"></button>
-          <img
-            id="modalImage"
-            src=""
-            class="rounded max-w-[70vw] max-h-[70vh] object-contain"
-          />
-        </div>
-      </div>
-    </main>
-  </body>
+				<div id="modalContent" class="relative bg-white opacity-0 shadow-2xl p-2 rounded-lg w-fit h-fit scale-[0.3] transition-all duration-300 transform">
+					<button id="modalExit" class="hidden"></button>
+					<img id="modalImage" src="" class="rounded max-w-[70vw] max-h-[70vh] object-contain" />
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
