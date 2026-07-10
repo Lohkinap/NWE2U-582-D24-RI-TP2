@@ -1,4 +1,4 @@
-# TP2: Retour vers le Future
+# TP2: Retour vers le Futur
 
 Réalisé par **Jérémy Roy-Pelletier** `2045783` et **Frédérick Lemieux** `0977928` dans le cadre du cours _Intégration des interfaces web II (582-D64-RI)_ au Cégep de Trois-Rivières.
 
