@@ -1,723 +1,394 @@
 <!doctype html>
 <html lang="fr-CA" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>index.html</title>
-    <meta name="description" content="" />
+		<title>Retour vers le Futur | Accueil</title>
+		<meta name="description" content="Découvrez l'histoire emblématique d'un adolescent envoyé dans les années 1950 à bord d'une DeLorean." />
 
-    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="icons/favicon-32x32.png"
-    />
+		<link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
 
-    <link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/style.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 
-    <script src="scripts/script.js" type="module" defer></script>
-  </head>
+		<script src="scripts/script.js" type="module" defer></script>
+	</head>
 
-  <body>
-    <main>
-      <div class="page__background"></div>
+	<body>
+		<a class="accessibility--reader" href="#content">Aller au contenu principal</a>
+		<main id="content">
+			<div class="page__background"></div>
 
-      <nav
-        id="navbar"
-        class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 rounded-lg max-w-6xl"
-      >
-        <div class="items-center grid grid-cols-12 mx-4 px-6 py-2">
-          <div class="col-span-6">
-            <a href="index.html"
-              ><img
-                src="assets/logo.svg"
-                alt="Logo du film Retour vers le Future"
-                class="drop-shadow-[0_6px_10px_#00000099] hover:drop-shadow-[0_10px_20px_#FF8C00B3] my-6 w-auto h-18 hover:scale-105 transition duration-300 cursor-pointer"
-            /></a>
-          </div>
+			<nav id="navbar" class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 rounded-xl max-w-6xl">
+				<div class="items-center grid grid-cols-12 mx-4 px-6 py-2">
+					<div class="col-span-6">
+						<a href="index.html">
+							<img src="assets/logo.svg" alt="Logo du film Retour vers le Futur" class="drop-shadow-[0_6px_10px_#00000099] my-6 w-auto h-18 cursor-pointer logo__hover" />
+						</a>
+					</div>
 
-          <div class="md:hidden flex justify-end col-span-6">
-            <button
-              id="mobile-menu-btn"
-              class="rounded-lg scale-125 btn btn-square btn-ghost"
-              onclick="
-                document
-                  .getElementById('mobile-menu')
-                  .classList.toggle('hidden')
-              "
-            >
-              <img
-                src="assets/burger.svg"
-                alt="Ouvrir ou fermer le menu de navigation"
-                class="inline-block w-7 h-7"
-              />
-            </button>
-          </div>
+					<div class="md:hidden flex justify-end col-span-6">
+						<button id="mobile-menu-btn" class="rounded-xl scale-125 btn btn-square btn-ghost" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+							<img src="assets/burger.svg" alt="Ouvrir ou fermer le menu de navigation" class="inline-block w-7 h-7" />
+						</button>
+					</div>
 
-          <div class="hidden md:flex justify-end md:col-span-6">
-            <ul class="font-bold menu menu-horizontal">
-              <li><a href="index.html" class="px-4 text-2xl">Accueil</a></li>
-              <li>
-                <a href="tournage.html" class="px-4 text-2xl">Tournage</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+					<div class="hidden md:flex justify-end md:col-span-6">
+						<ul class="font-bold menu menu-horizontal">
+							<li><a href="index.html" class="px-4 text-2xl">Accueil</a></li>
+							<li><a href="tournage.html" class="px-4 text-2xl">Tournage</a></li>
+						</ul>
+					</div>
+				</div>
 
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-          <ul class="items-center w-full font-bold text-center menu">
-            <li class="w-full">
-              <a
-                href="index.html"
-                class="justify-center py-3 border-gray-400 border-b-2 text-2xl"
-                >Accueil</a
-              >
-            </li>
-            <li class="w-full">
-              <a href="tournage.html" class="justify-center py-3 text-2xl"
-                >Tournage</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
+				<div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+					<ul class="items-center w-full font-bold text-center menu">
+						<li class="w-full"><a href="index.html" class="justify-center py-3 border-gray-400 border-b-2 text-2xl">Accueil</a></li>
+						<li class="w-full"><a href="tournage.html" class="justify-center py-3 text-2xl">Tournage</a></li>
+					</ul>
+				</div>
+			</nav>
 
-      <section
-        id="hero"
-        class="items-center gap-10 grid grid-cols-1 md:grid-cols-12 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl"
-      >
-        <div class="md:col-span-6">
-          <div class="space-y-6 md:text-left text-center">
-            <h1
-              class="font-bold text-gray-900 text-4xl md:text-5xl uppercase tracking-tight"
-            >
-              Retour vers le future
-            </h1>
+			<section id="hero" class="items-center gap-10 grid grid-cols-1 md:grid-cols-12 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-xl max-w-6xl">
+				<div class="md:col-span-6">
+					<div class="space-y-6 md:text-left text-center">
+						<h1 class="font-bold text-gray-900 text-4xl md:text-5xl uppercase tracking-tight">Retour vers le futur</h1>
 
-            <p class="mx-auto md:mx-0 max-w-md text-gray-600">
-              Découvrez l'histoire emblématique d'un adolescent envoyé dans les
-              années 1950 à bord d'une DeLorean.
-            </p>
+						<p class="mx-auto md:mx-0 max-w-md text-gray-600">Découvrez l'histoire emblématique d'un adolescent envoyé dans les années 1950 à bord d'une DeLorean.</p>
 
-            <div
-              class="flex flex-wrap justify-center md:justify-start gap-4 pt-6"
-            >
-              <a
-                href="#trailer-anchor"
-                class="bg-white hover:bg-gray-700 px-6 py-3 rounded-lg font-medium text-black hover:text-white text-center hover:scale-102 transition-all duration-300 ease-in-out cursor-pointer"
-              >
-                Voir la bande-annonce
-              </a>
-              <a
-                href="https://www.backtothefuture.store/en-ca/products/back-to-the-future-limited-edition-steelbook"
-                target="_blank"
-                class="bg-black hover:bg-gray-800 px-6 py-3 rounded-lg font-medium text-white text-center hover:scale-102 transition-all duration-300 ease-in-out"
-              >
-                Acheter
-              </a>
-            </div>
-          </div>
-        </div>
+						<div class="flex flex-wrap justify-center md:justify-start gap-4 pt-6">
+							<a href="#trailer-anchor" class="bg-white px-6 py-3 rounded-xl font-medium text-black text-center cursor-pointer btn__hover btn__hover--white"> Voir la bande-annonce </a>
+							<a href="https://www.backtothefuture.store/en-ca/products/back-to-the-future-limited-edition-steelbook" target="_blank" class="bg-black px-6 py-3 rounded-xl font-medium text-white text-center btn__hover btn__hover--black">
+								Acheter
+							</a>
+						</div>
+					</div>
+				</div>
 
-        <div class="md:col-span-6 w-full">
-          <div class="relative rounded-lg w-full aspect-video overflow-hidden">
-            <input
-              type="radio"
-              name="carousel"
-              id="item1"
-              class="peer/i1 hidden"
-              checked
-            />
-            <input
-              type="radio"
-              name="carousel"
-              id="item2"
-              class="peer/i2 hidden"
-            />
-            <input
-              type="radio"
-              name="carousel"
-              id="item3"
-              class="peer/i3 hidden"
-            />
-            <input
-              type="radio"
-              name="carousel"
-              id="item4"
-              class="peer/i4 hidden"
-            />
+				<div class="md:col-span-6 w-full">
+					<div class="relative rounded-xl w-full aspect-video overflow-hidden">
+						<input type="radio" name="carousel" id="item1" class="peer/i1 hidden" checked />
+						<input type="radio" name="carousel" id="item2" class="peer/i2 hidden" />
+						<input type="radio" name="carousel" id="item3" class="peer/i3 hidden" />
+						<input type="radio" name="carousel" id="item4" class="peer/i4 hidden" />
 
-            <img
-              src="assets/carousel-0439.jpg"
-              alt=""
-              class="peer-checked/i1:z-10 absolute inset-0 opacity-0 peer-checked/i1:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
-            />
-            <img
-              src="assets/carousel-0524.jpg"
-              alt=""
-              class="peer-checked/i2:z-10 absolute inset-0 opacity-0 peer-checked/i2:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
-            />
-            <img
-              src="assets/carousel-0978.jpg"
-              alt=""
-              class="peer-checked/i3:z-10 absolute inset-0 opacity-0 peer-checked/i3:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
-            />
-            <img
-              src="assets/carousel-2214.jpg"
-              alt=""
-              class="peer-checked/i4:z-10 absolute inset-0 opacity-0 peer-checked/i4:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
-            />
-          </div>
+						<img
+							src="assets/carousel-0439.jpg"
+							alt="La DeLorean illuminée circulant sur un parking de nuit"
+							class="peer-checked/i1:z-10 absolute inset-0 opacity-0 peer-checked/i1:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
+						/>
+						<img
+							src="assets/carousel-0524.jpg"
+							alt="Doc Brown, l'air choqué, avec ses cheveux blancs ébouriffés"
+							class="peer-checked/i2:z-10 absolute inset-0 opacity-0 peer-checked/i2:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
+						/>
+						<img
+							src="assets/carousel-0978.jpg"
+							alt="Doc Brown portant un casque technologique face à Marty"
+							class="peer-checked/i3:z-10 absolute inset-0 opacity-0 peer-checked/i3:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
+						/>
+						<img
+							src="assets/carousel-2214.jpg"
+							alt="Doc Brown en veste dorée saisissant Marty devant la DeLorean"
+							class="peer-checked/i4:z-10 absolute inset-0 opacity-0 peer-checked/i4:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
+						/>
+					</div>
 
-          <div class="flex justify-center gap-2 py-2 w-full">
-            <label for="item1" class="cursor-pointer btn btn-sm">1</label>
-            <label for="item2" class="cursor-pointer btn btn-sm">2</label>
-            <label for="item3" class="cursor-pointer btn btn-sm">3</label>
-            <label for="item4" class="cursor-pointer btn btn-sm">4</label>
-          </div>
-        </div>
-      </section>
+					<div class="flex justify-center gap-2 py-2 w-full">
+						<label for="item1" class="cursor-pointer btn btn-sm">1</label>
+						<label for="item2" class="cursor-pointer btn btn-sm">2</label>
+						<label for="item3" class="cursor-pointer btn btn-sm">3</label>
+						<label for="item4" class="cursor-pointer btn btn-sm">4</label>
+					</div>
+				</div>
+			</section>
 
-      <section
-        id="gallery"
-        class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl"
-      >
-        <div class="space-y-4 text-center">
-          <h2 class="font-bold text-4xl uppercase tracking-tight">
-            Images et extraits
-          </h2>
+			<section id="gallery" class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-xl max-w-6xl">
+				<div class="space-y-4 text-center">
+					<h2 class="font-bold text-4xl uppercase tracking-tight">Images et extraits</h2>
 
-          <p class="text-gray-600">
-            Plongez au cœur du film à travers cette sélection d'images.
-          </p>
+					<p class="text-gray-600">Plongez au cœur du film à travers cette sélection d'images.</p>
 
-          <div class="flex justify-center gap-2 pt-2">
-            <input
-              type="email"
-              placeholder="votre@courriel.com"
-              class="bg-white px-4 py-3 rounded-lg w-64"
-            />
-            <a
-              href="#"
-              class="bg-black hover:bg-gray-800 px-6 py-3 rounded-lg font-medium text-white hover:scale-102 transition-all duration-300 ease-in-out"
-              >M'inscrire à la newsletter</a
-            >
-          </div>
-        </div>
+					<div class="flex justify-center gap-2 pt-2">
+						<input type="email" placeholder="votre@courriel.com" class="bg-white px-4 py-3 rounded-xl w-64" />
+						<a href="#" class="bg-black px-6 py-3 rounded-xl font-medium text-white btn__hover btn__hover--black"> M'inscrire à la newsletter </a>
+					</div>
+				</div>
 
-        <div class="gap-6 grid grid-cols-12">
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0093.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+				<div class="gap-6 grid grid-cols-12">
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0093.jpg" alt="Marty McFly ajustant ses lunettes de soleil" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0133.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0133.jpg" alt="Marty faisant du skateboard derrière une Jeep en ville" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0368.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img
+								src="assets/gallery-0368.jpg"
+								alt="Vue de nuit du parking devant le centre commercial Twin Pines Mall"
+								class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
+							/>
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0377.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0377.jpg" alt="Le chien Einstein assis près de Marty" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0385.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0385.jpg" alt="Gros plan sur le capot avant de la DeLorean" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0442.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0442.jpg" alt="Doc Brown et Marty regardant vers le haut avec inquiétude" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0445.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0445.jpg" alt="Doc Brown célébrant avec enthousiasme près de traces de feu" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0503.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0503.jpg" alt="Doc Brown souriant, assis au volant de la DeLorean" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0724.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0724.jpg" alt="Marty McFly regardant autour de lui, préoccupé" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0778.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0778.jpg" alt="Biff Tannen confrontant Marty dans un restaurant" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-0982.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-0982.jpg" alt="Doc Brown portant son casque expérimental avec enthousiasme" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-1345.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-1345.jpg" alt="Marty faisant du skateboard pour échapper à une voiture" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-1791.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-1791.jpg" alt="Marty jouant intensément de la guitare électrique sur scène" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-2213.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img
+								src="assets/gallery-2213.jpg"
+								alt="Doc Brown, en tenue futuriste, montrant la DeLorean à Marty et Jennifer"
+								class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
+							/>
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-            >
-              <img
-                src="assets/gallery-2226.jpg"
-                alt="Gallery Image"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-          </div>
+					<div class="space-y-2 col-span-12 md:col-span-6 lg:col-span-4">
+						<div class="bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+							<img src="assets/gallery-2226.jpg" alt="Gros plan sur Doc Brown, l'air étonné" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+					</div>
 
-          <div id="trailer-anchor" class="-top-20 relative"></div>
+					<div id="trailer-anchor" class="-top-20 relative"></div>
 
-          <div class="space-y-2 col-span-12">
-            <video
-              id="video"
-              poster="videos/video.thumbnail.jpg"
-              autoplay
-              muted
-              loop
-              controls
-              class="rounded-lg w-full aspect-video"
-              style="object-fit: cover"
-            >
-              <source src="videos/video.webm" type="video/webm" />
-              <source src="videos/video.mp4" type="video/mp4" />
-              Votre navigateur ne prend pas en charge la balise vidéo.
-            </video>
-          </div>
-        </div>
-      </section>
+					<div class="space-y-2 col-span-12">
+						<video id="video" poster="videos/video.thumbnail.jpg" autoplay muted loop controls class="rounded-xl w-full aspect-video" style="object-fit: cover">
+							<source src="videos/video.webm" type="video/webm" />
+							<source src="videos/video.mp4" type="video/mp4" />
+							Votre navigateur ne prend pas en charge la balise vidéo.
+						</video>
+					</div>
+				</div>
+			</section>
 
-      <section
-        id="actors"
-        class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl"
-      >
-        <div class="space-y-3">
-          <h2 class="font-bold text-4xl uppercase tracking-tight">
-            Les acteurs
-          </h2>
-          <p class="max-w-lg text-gray-600">
-            Les acteurs qui ont donné vie à aux personnages.
-          </p>
-        </div>
+			<section id="actors" class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-xl max-w-6xl">
+				<div class="space-y-3">
+					<h2 class="font-bold text-4xl uppercase tracking-tight">Les acteurs</h2>
+					<p class="max-w-lg text-gray-600">Les acteurs qui ont donné vie à aux personnages.</p>
+				</div>
 
-        <div class="gap-6 grid grid-cols-12">
-          <div class="space-y-2 col-span-6 lg:col-span-3">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden"
-            >
-              <img
-                src="assets/actor-fox-michael.jpg"
-                alt="Photo de l'acteur Michael J. Fox"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-            <div>
-              <p class="font-bold">Michael J. Fox</p>
-              <p class="font-medium text-gray-600 text-sm">Marty McFly</p>
-            </div>
-          </div>
+				<div class="gap-6 grid grid-cols-12">
+					<div class="space-y-2 col-span-6 lg:col-span-3">
+						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
+							<img src="assets/actor-fox-michael.jpg" alt="Photo de l'acteur Michael J. Fox" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+						<div>
+							<p class="font-bold">Michael J. Fox</p>
+							<p class="font-medium text-gray-600 text-sm">Marty McFly</p>
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-6 lg:col-span-3">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden"
-            >
-              <img
-                src="assets/actor-lloyd-christopher.jpg"
-                alt="Photo de l'acteur Christopher Lloyd"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-            <div>
-              <p class="font-bold">Christopher Lloyd</p>
-              <p class="font-medium text-gray-600 text-sm">
-                Dr. Emmett Brown (Doc)
-              </p>
-            </div>
-          </div>
+					<div class="space-y-2 col-span-6 lg:col-span-3">
+						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
+							<img src="assets/actor-lloyd-christopher.jpg" alt="Photo de l'acteur Christopher Lloyd" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+						<div>
+							<p class="font-bold">Christopher Lloyd</p>
+							<p class="font-medium text-gray-600 text-sm">Dr. Emmett Brown (Doc)</p>
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-6 lg:col-span-3">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden"
-            >
-              <img
-                src="assets/actor-thompson-lea.jpg"
-                alt="Photo de l'actrice Lea Thompsons"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-            <div>
-              <p class="font-bold">Lea Thompson</p>
-              <p class="font-medium text-gray-600 text-sm">Lorraine Baines</p>
-            </div>
-          </div>
+					<div class="space-y-2 col-span-6 lg:col-span-3">
+						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
+							<img src="assets/actor-thompson-lea.jpg" alt="Photo de l'actrice Lea Thompsons" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+						<div>
+							<p class="font-bold">Lea Thompson</p>
+							<p class="font-medium text-gray-600 text-sm">Lorraine Baines</p>
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-6 lg:col-span-3">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden"
-            >
-              <img
-                src="assets/actor-glover-crispin.jpg"
-                alt="Photo de l'acteur Crispin Glover"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-            <div>
-              <p class="font-bold">Crispin Glover</p>
-              <p class="font-medium text-gray-600 text-sm">George McFly</p>
-            </div>
-          </div>
+					<div class="space-y-2 col-span-6 lg:col-span-3">
+						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
+							<img src="assets/actor-glover-crispin.jpg" alt="Photo de l'acteur Crispin Glover" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+						<div>
+							<p class="font-bold">Crispin Glover</p>
+							<p class="font-medium text-gray-600 text-sm">George McFly</p>
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-6 lg:col-span-3">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden"
-            >
-              <img
-                src="assets/actor-wilson-tom.jpg"
-                alt="Photo de l'acteur Thomas F. Wilson"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-            <div>
-              <p class="font-bold">Thomas F. Wilson</p>
-              <p class="font-medium text-gray-600 text-sm">Biff Tannen</p>
-            </div>
-          </div>
+					<div class="space-y-2 col-span-6 lg:col-span-3">
+						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
+							<img src="assets/actor-wilson-tom.jpg" alt="Photo de l'acteur Thomas F. Wilson" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+						<div>
+							<p class="font-bold">Thomas F. Wilson</p>
+							<p class="font-medium text-gray-600 text-sm">Biff Tannen</p>
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-6 lg:col-span-3">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden"
-            >
-              <img
-                src="assets/actor-wells-claudia.jpg"
-                alt="Photo de l'actrice Claudia Wells"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-            <div>
-              <p class="font-bold">Claudia Wells</p>
-              <p class="font-medium text-gray-600 text-sm">Jennifer Parker</p>
-            </div>
-          </div>
+					<div class="space-y-2 col-span-6 lg:col-span-3">
+						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
+							<img src="assets/actor-wells-claudia.jpg" alt="Photo de l'actrice Claudia Wells" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+						<div>
+							<p class="font-bold">Claudia Wells</p>
+							<p class="font-medium text-gray-600 text-sm">Jennifer Parker</p>
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-6 lg:col-span-3">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden"
-            >
-              <img
-                src="assets/actor-mcclure-marc.jpg"
-                alt="Photo de l'acteur Marc McClure"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-            <div>
-              <p class="font-bold">Marc McClure</p>
-              <p class="font-medium text-gray-600 text-sm">Dave McFly</p>
-            </div>
-          </div>
+					<div class="space-y-2 col-span-6 lg:col-span-3">
+						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
+							<img src="assets/actor-mcclure-marc.jpg" alt="Photo de l'acteur Marc McClure" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+						<div>
+							<p class="font-bold">Marc McClure</p>
+							<p class="font-medium text-gray-600 text-sm">Dave McFly</p>
+						</div>
+					</div>
 
-          <div class="space-y-2 col-span-6 lg:col-span-3">
-            <div
-              class="bg-gray-200 rounded-lg w-full aspect-square overflow-hidden"
-            >
-              <img
-                src="assets/actor-sperber-wendie.jpg"
-                alt="Photo de l'actrice Wendie Jo Sperber"
-                class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-              />
-            </div>
-            <div>
-              <p class="font-bold">Wendie Jo Sperber</p>
-              <p class="font-medium text-gray-600 text-sm">Linda McFly</p>
-            </div>
-          </div>
-        </div>
-      </section>
+					<div class="space-y-2 col-span-6 lg:col-span-3">
+						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
+							<img src="assets/actor-sperber-wendie.jpg" alt="Photo de l'actrice Wendie Jo Sperber" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+						</div>
+						<div>
+							<p class="font-bold">Wendie Jo Sperber</p>
+							<p class="font-medium text-gray-600 text-sm">Linda McFly</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <section
-        id="set"
-        class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-lg max-w-6xl"
-      >
-        <div class="space-y-3">
-          <h2 class="font-bold text-4xl uppercase tracking-tight">
-            Lieux de tournage
-          </h2>
-        </div>
+			<section id="set" class="space-y-10 bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 px-12 py-12 rounded-xl max-w-6xl">
+				<div class="space-y-3">
+					<h2 class="font-bold text-4xl uppercase tracking-tight">Lieux de tournage</h2>
+				</div>
 
-        <div class="items-center gap-8 grid grid-cols-1 md:grid-cols-12">
-          <div
-            class="md:col-span-6 bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-          >
-            <img
-              src="assets/set-twin-pines-mall.jpg"
-              alt=""
-              class="grayscale hover:grayscale-0 rounded-lg w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-            />
-          </div>
-          <div class="space-y-1 md:col-span-6 w-full">
-            <p class="font-bold text-xl">Puente Hills Mall</p>
-            <p class="text-xl">
-              Le centre commercial où Marty McFly rencontre Doc Brown pour le
-              premier essai de la machine à remonter le temps est en réalité le
-              Puente Hills Mall, situé à Industry, en Californie.
-            </p>
-          </div>
-        </div>
-        <div class="items-center gap-8 grid grid-cols-1 md:grid-cols-12">
-          <div
-            class="md:order-2 md:col-span-6 bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-          >
-            <img
-              src="assets/set-marty-house.jpg"
-              alt=""
-              class="grayscale hover:grayscale-0 rounded-lg w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-            />
-          </div>
-          <div class="space-y-1 md:order-1 md:col-span-6 w-full">
-            <p class="font-bold text-xl text-right">
-              Maison de la famille McFly
-            </p>
-            <p class="text-xl text-right">
-              Située à Arleta, en Californie, cette maison résidentielle a servi
-              de décor au domicile de la famille McFly dans le film.
-            </p>
-          </div>
-        </div>
-        <div class="items-center gap-8 grid grid-cols-1 md:grid-cols-12">
-          <div
-            class="md:col-span-6 bg-gray-200 rounded-lg w-full aspect-video overflow-hidden"
-          >
-            <img
-              src="assets/set-whittier-union-high-school.jpg"
-              alt=""
-              class="grayscale hover:grayscale-0 rounded-lg w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
-            />
-          </div>
-          <div class="space-y-1 md:col-span-6 w-full">
-            <p class="font-bold text-xl">Whittier Union High School</p>
-            <p class="text-xl">
-              Ce bâtiment historique a été utilisé pour représenter le lycée de
-              Hill Valley, où Marty McFly fréquente ses parents adolescents et
-              joue lors du bal de fin d'année.
-            </p>
-          </div>
-        </div>
-      </section>
+				<div class="items-center gap-8 grid grid-cols-1 md:grid-cols-12">
+					<div class="md:col-span-6 bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+						<img src="assets/set-twin-pines-mall.jpg" alt="Parking d'un centre commercial éclairé la nuit" class="grayscale hover:grayscale-0 rounded-xl w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
+					</div>
+					<div class="space-y-1 md:col-span-6 w-full">
+						<p class="font-bold text-xl">Puente Hills Mall</p>
+						<p class="text-xl">Le centre commercial où Marty McFly rencontre Doc Brown pour le premier essai de la machine à remonter le temps est en réalité le Puente Hills Mall, situé à Industry, en Californie.</p>
+					</div>
+				</div>
+				<div class="items-center gap-8 grid grid-cols-1 md:grid-cols-12">
+					<div class="md:order-2 md:col-span-6 bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+						<img
+							src="assets/set-marty-house.jpg"
+							alt="Maison résidentielle de plain-pied avec un garage et une allée"
+							class="grayscale hover:grayscale-0 rounded-xl w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
+						/>
+					</div>
+					<div class="space-y-1 md:order-1 md:col-span-6 w-full">
+						<p class="font-bold text-xl text-right">Maison de la famille McFly</p>
+						<p class="text-xl text-right">Située à Arleta, en Californie, cette maison résidentielle a servi de décor au domicile de la famille McFly dans le film.</p>
+					</div>
+				</div>
+				<div class="items-center gap-8 grid grid-cols-1 md:grid-cols-12">
+					<div class="md:col-span-6 bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
+						<img
+							src="assets/set-whittier-union-high-school.jpg"
+							alt="Bâtiment administratif d'une école secondaire avec des colonnes"
+							class="grayscale hover:grayscale-0 rounded-xl w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
+						/>
+					</div>
+					<div class="space-y-1 md:col-span-6 w-full">
+						<p class="font-bold text-xl">Whittier Union High School</p>
+						<p class="text-xl">Ce bâtiment historique a été utilisé pour représenter le lycée de Hill Valley, où Marty McFly fréquente ses parents adolescents et joue lors du bal de fin d'année.</p>
+					</div>
+				</div>
+			</section>
 
-      <footer
-        class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 mb-6 rounded-lg max-w-6xl"
-      >
-        <div class="px-8 py-4">
-          <div
-            class="items-center gap-1 md:gap-6 grid grid-cols-1 md:grid-cols-12"
-          >
-            <div
-              class="flex md:flex-row flex-col items-center gap-1 md:gap-4 md:col-span-6 font-medium text-sm"
-            >
-              <a
-                href="tel:+8193761721"
-                class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"
-              >
-                <img
-                  src="assets/icon-phone.png"
-                  alt="Téléphone"
-                  class="w-4 h-4"
-                />(819) 376-1721
-              </a>
-              <a
-                href="mailto:hello@cegeptr.qc.ca"
-                class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"
-              >
-                <img
-                  src="assets/icon-mail.png"
-                  alt="Courriel"
-                  class="w-4 h-4"
-                />hello@cegeptr.qc.ca
-              </a>
-            </div>
-            <div
-              class="flex md:flex-row flex-col md:justify-end items-center gap-1 md:gap-4 md:col-span-6"
-            >
-              <span class="text-sm"
-                >Jérémy Roy-Pelletier & Frédérick Lemieux</span
-              >
-              <div class="flex items-center gap-2">
-                <a href="#" class="hover:opacity-60 transition-opacity"
-                  ><img
-                    src="assets/icon-facebook-outline.svg"
-                    alt="Facebook"
-                    class="w-5 h-5"
-                /></a>
-                <a href="#" class="hover:opacity-60 transition-opacity"
-                  ><img
-                    src="assets/icon-linkedin-outline.svg"
-                    alt="Linkedin"
-                    class="w-5 h-5"
-                /></a>
-                <a href="#" class="hover:opacity-60 transition-opacity"
-                  ><img src="assets/icon-x-outline.svg" alt="X" class="w-5 h-5"
-                /></a>
-                <a href="#" class="hover:opacity-60 transition-opacity"
-                  ><img
-                    src="assets/icon-instagram-outline.svg"
-                    alt="Instagram"
-                    class="w-5 h-5"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </main>
+			<footer class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 mb-6 rounded-xl max-w-6xl">
+				<div class="px-8 py-4">
+					<div class="items-center gap-1 md:gap-6 grid grid-cols-1 md:grid-cols-12">
+						<div class="flex md:flex-row flex-col items-center gap-1 md:gap-4 md:col-span-6 font-medium text-sm">
+							<a href="tel:+8193761721" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-phone.png" alt="Téléphone" class="w-4 h-4" />(819) 376-1721 </a>
+							<a href="mailto:hello@cegeptr.qc.ca" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-mail.png" alt="Courriel" class="w-4 h-4" />hello@cegeptr.qc.ca </a>
+						</div>
+						<div class="flex md:flex-row flex-col md:justify-end items-center gap-1 md:gap-4 md:col-span-6">
+							<span class="text-sm">Jérémy Roy-Pelletier & Frédérick Lemieux</span>
+							<div class="flex items-center gap-2">
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-facebook-outline.svg" alt="Facebook" class="w-5 h-5" /></a>
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-linkedin-outline.svg" alt="Linkedin" class="w-5 h-5" /></a>
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-x-outline.svg" alt="X" class="w-5 h-5" /></a>
+								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-instagram-outline.svg" alt="Instagram" class="w-5 h-5" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</main>
 
-    <div
-      id="modal"
-      class="hidden z-10 fixed inset-0 justify-center items-center p-4"
-    >
-      <div
-        id="modalOverlay"
-        class="absolute inset-0 bg-white/0 opacity-0 backdrop-blur-sm transition-opacity duration-700"
-      ></div>
+		<div id="modal" class="hidden z-10 fixed inset-0 justify-center items-center p-4">
+			<div id="modalOverlay" class="absolute inset-0 bg-white/0 opacity-0 backdrop-blur-sm transition-opacity duration-700"></div>
 
-      <div
-        id="modalContent"
-        class="relative bg-white opacity-0 shadow-2xl p-2 rounded-lg w-fit h-fit scale-[0.3] transition-all duration-300 transform"
-      >
-        <button id="modalExit" class="hidden"></button>
-        <img
-          id="modalImage"
-          src=""
-          class="rounded max-w-[70vw] max-h-[70vh] object-contain"
-        />
-      </div>
-    </div>
-  </body>
+			<div id="modalContent" class="relative bg-white opacity-0 shadow-2xl p-2 rounded-xl w-fit h-fit scale-[0.3] transition-all duration-300 transform">
+				<button id="modalExit" class="hidden"></button>
+				<img id="modalImage" src="" class="rounded max-w-[70vw] max-h-[70vh] object-contain" />
+			</div>
+		</div>
+	</body>
 </html>

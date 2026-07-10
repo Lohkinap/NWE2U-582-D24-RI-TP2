@@ -1,5 +1,18 @@
 @import 'tailwindcss';
 
+.accessibility--reader {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
 .page__background {
 	position: fixed;
 	inset: 0;
@@ -11,4 +24,36 @@
 	z-index: -1;
 	pointer-events: none;
 	filter: blur(3px);
+}
+
+.logo__hover {
+	transition:
+		transform 0.1s ease,
+		filter 0.1s ease;
+	cursor: pointer;
+	filter: drop-shadow(0 6px 10px #00000099);
+}
+
+.logo__hover:hover {
+	transform: scale(1.05);
+	filter: drop-shadow(0 10px 20px #ff8c00b3);
+}
+
+.btn__hover {
+	transition:
+		transform 0.1s ease-in-out,
+		background-color 0.1s ease-in-out,
+		color 0.1s ease-in-out;
+	cursor: pointer;
+}
+
+.btn__hover--white:hover {
+	transform: scale(1.05);
+	background-color: #374151;
+	color: #ffffff;
+}
+
+.btn__hover--black:hover {
+	transform: scale(1.05);
+	background-color: #1f2937;
 }
