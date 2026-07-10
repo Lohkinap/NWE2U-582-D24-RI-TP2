@@ -81,16 +81,19 @@
 							alt="La DeLorean illuminée circulant sur un parking de nuit"
 							class="peer-checked/i1:z-10 absolute inset-0 opacity-0 peer-checked/i1:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
 						/>
+
 						<img
 							src="assets/carousel-0524.jpg"
 							alt="Doc Brown, l'air choqué, avec ses cheveux blancs ébouriffés"
 							class="peer-checked/i2:z-10 absolute inset-0 opacity-0 peer-checked/i2:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
 						/>
+
 						<img
 							src="assets/carousel-0978.jpg"
 							alt="Doc Brown portant un casque technologique face à Marty"
 							class="peer-checked/i3:z-10 absolute inset-0 opacity-0 peer-checked/i3:opacity-100 w-full h-full object-cover hover:scale-102 transition-all duration-600 ease-in-out cursor-pointer"
 						/>
+
 						<img
 							src="assets/carousel-2214.jpg"
 							alt="Doc Brown en veste dorée saisissant Marty devant la DeLorean"
@@ -113,9 +116,16 @@
 
 					<p class="text-gray-600">Plongez au cœur du film à travers cette sélection d'images.</p>
 
-					<div class="flex justify-center gap-2 pt-2">
-						<input type="email" placeholder="votre@courriel.com" class="bg-white px-4 py-3 rounded-xl w-64" />
-						<a href="#" class="bg-black px-6 py-3 rounded-xl font-medium text-white btn__hover btn__hover--black"> M'inscrire à la newsletter </a>
+					<div class="flex justify-center w-full">
+						<form id="newsletter" class="flex flex-col items-center gap-2 pt-2 w-full max-w-lg" novalidate>
+							<div id="newsletter-container" class="flex md:flex-row flex-col gap-2 w-full">
+								<input id="newsletter-email" name="newsletter" type="email" placeholder="votre@courriel.com" class="bg-white px-4 py-3 border rounded-xl w-full" />
+								<button type="submit" class="bg-black px-6 py-3 rounded-xl font-medium text-white whitespace-nowrap btn__hover btn__hover--black">M'inscrire à l'infolettre</button>
+							</div>
+
+							<div id="newsletter-errors" class="hidden flex-col items-start bg-red-50 mt-2 px-4 py-3 border border-red-200 rounded-xl w-full text-red-600 text-sm"></div>
+							<div id="newsletter-success" class="hidden bg-green-50 mt-2 px-4 py-3 border border-green-200 rounded-xl w-full text-green-700 text-sm">Vous avez été ajouté à notre infolettre.</div>
+						</form>
 					</div>
 				</div>
 
@@ -241,6 +251,7 @@
 						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
 							<img src="assets/actor-fox-michael.jpg" alt="Photo de l'acteur Michael J. Fox" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
 						</div>
+
 						<div>
 							<p class="font-bold">Michael J. Fox</p>
 							<p class="font-medium text-gray-600 text-sm">Marty McFly</p>
@@ -251,6 +262,7 @@
 						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
 							<img src="assets/actor-lloyd-christopher.jpg" alt="Photo de l'acteur Christopher Lloyd" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
 						</div>
+
 						<div>
 							<p class="font-bold">Christopher Lloyd</p>
 							<p class="font-medium text-gray-600 text-sm">Dr. Emmett Brown (Doc)</p>
@@ -261,6 +273,7 @@
 						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
 							<img src="assets/actor-thompson-lea.jpg" alt="Photo de l'actrice Lea Thompsons" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
 						</div>
+
 						<div>
 							<p class="font-bold">Lea Thompson</p>
 							<p class="font-medium text-gray-600 text-sm">Lorraine Baines</p>
@@ -271,6 +284,7 @@
 						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
 							<img src="assets/actor-glover-crispin.jpg" alt="Photo de l'acteur Crispin Glover" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
 						</div>
+
 						<div>
 							<p class="font-bold">Crispin Glover</p>
 							<p class="font-medium text-gray-600 text-sm">George McFly</p>
@@ -281,6 +295,7 @@
 						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
 							<img src="assets/actor-wilson-tom.jpg" alt="Photo de l'acteur Thomas F. Wilson" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
 						</div>
+
 						<div>
 							<p class="font-bold">Thomas F. Wilson</p>
 							<p class="font-medium text-gray-600 text-sm">Biff Tannen</p>
@@ -291,6 +306,7 @@
 						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
 							<img src="assets/actor-wells-claudia.jpg" alt="Photo de l'actrice Claudia Wells" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
 						</div>
+
 						<div>
 							<p class="font-bold">Claudia Wells</p>
 							<p class="font-medium text-gray-600 text-sm">Jennifer Parker</p>
@@ -301,6 +317,7 @@
 						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
 							<img src="assets/actor-mcclure-marc.jpg" alt="Photo de l'acteur Marc McClure" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
 						</div>
+
 						<div>
 							<p class="font-bold">Marc McClure</p>
 							<p class="font-medium text-gray-600 text-sm">Dave McFly</p>
@@ -311,6 +328,7 @@
 						<div class="bg-gray-200 rounded-xl w-full aspect-square overflow-hidden">
 							<img src="assets/actor-sperber-wendie.jpg" alt="Photo de l'actrice Wendie Jo Sperber" class="grayscale hover:grayscale-0 w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
 						</div>
+
 						<div>
 							<p class="font-bold">Wendie Jo Sperber</p>
 							<p class="font-medium text-gray-600 text-sm">Linda McFly</p>
@@ -328,6 +346,7 @@
 					<div class="md:col-span-6 bg-gray-200 rounded-xl w-full aspect-video overflow-hidden">
 						<img src="assets/set-twin-pines-mall.jpg" alt="Parking d'un centre commercial éclairé la nuit" class="grayscale hover:grayscale-0 rounded-xl w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer" />
 					</div>
+
 					<div class="space-y-1 md:col-span-6 w-full">
 						<p class="font-bold text-xl">Puente Hills Mall</p>
 						<p class="text-xl">Le centre commercial où Marty McFly rencontre Doc Brown pour le premier essai de la machine à remonter le temps est en réalité le Puente Hills Mall, situé à Industry, en Californie.</p>
@@ -341,6 +360,7 @@
 							class="grayscale hover:grayscale-0 rounded-xl w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
 						/>
 					</div>
+
 					<div class="space-y-1 md:order-1 md:col-span-6 w-full">
 						<p class="font-bold text-xl text-right">Maison de la famille McFly</p>
 						<p class="text-xl text-right">Située à Arleta, en Californie, cette maison résidentielle a servi de décor au domicile de la famille McFly dans le film.</p>
@@ -354,6 +374,7 @@
 							class="grayscale hover:grayscale-0 rounded-xl w-full h-full object-cover hover:scale-102 transition duration-300 cursor-pointer"
 						/>
 					</div>
+
 					<div class="space-y-1 md:col-span-6 w-full">
 						<p class="font-bold text-xl">Whittier Union High School</p>
 						<p class="text-xl">Ce bâtiment historique a été utilisé pour représenter le lycée de Hill Valley, où Marty McFly fréquente ses parents adolescents et joue lors du bal de fin d'année.</p>
@@ -368,8 +389,10 @@
 							<a href="tel:+8193761721" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-phone.png" alt="Téléphone" class="w-4 h-4" />(819) 376-1721 </a>
 							<a href="mailto:hello@cegeptr.qc.ca" class="flex items-center gap-1.5 hover:text-gray-600 transition-colors"> <img src="assets/icon-mail.png" alt="Courriel" class="w-4 h-4" />hello@cegeptr.qc.ca </a>
 						</div>
+
 						<div class="flex md:flex-row flex-col md:justify-end items-center gap-1 md:gap-4 md:col-span-6">
 							<span class="text-sm">Jérémy Roy-Pelletier & Frédérick Lemieux</span>
+
 							<div class="flex items-center gap-2">
 								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-facebook-outline.svg" alt="Facebook" class="w-5 h-5" /></a>
 								<a href="#" class="hover:opacity-60 transition-opacity"><img src="assets/icon-linkedin-outline.svg" alt="Linkedin" class="w-5 h-5" /></a>
