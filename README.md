@@ -4,6 +4,9 @@ Réalisé par **Jérémy Roy-Pelletier** `2045783` et **Frédérick Lemieux** `0
 
 ## Dépôt et accès
 
+> [!WARNING]
+>Le fichier [`index.html`](src/index.html) doit être lancé via un serveur local, comme l'extension [vscode-live-server](https://github.com/ritwickdey/vscode-live-server), pour assurer le bon fonctionnement des scripts.
+
 - **Code source:** Disponible sur le [dépôt GitHub](https://github.com/Lohkinap/NWE2U-582-D24-RI-TP2).
 - **Clone:** `git clone git@github.com:Lohkinap/NWE2U-582-D24-RI-TP2.git`
 
