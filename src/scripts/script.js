@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	initModal();
 	initCounters();
-	initChart();
+	updateBackgroundPosition();
 });
 
 document.addEventListener('scroll', updateBackgroundPosition);
@@ -26,7 +26,7 @@ function initModal() {
 	const modalImage = document.getElementById('modalImage');
 	const modalExit = document.getElementById('modalExit');
 	const modalOverlay = document.getElementById('modalOverlay');
-	const images = document.querySelectorAll('#actors img, #media img, #facts img, #hero img');
+	const images = document.querySelectorAll('#actors img, #facts img, #gallery img, #hero img, #media img, #set img, #trivia img');
 
 	const openModal = (source) => {
 		modalImage.src = source;
