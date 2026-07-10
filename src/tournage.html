@@ -23,25 +23,32 @@
 			<div class="page__background"></div>
 
 			<nav id="navbar" class="bg-white/80 shadow-lg mx-4 md:mx-auto mt-6 rounded-lg max-w-6xl">
-				<div class="items-center grid grid-cols-12 px-6 py-2">
+				<div class="items-center grid grid-cols-12 mx-4 px-6 py-2">
 					<div class="col-span-6">
-						<a class="font-bold text-3xl uppercase tracking-wider">Logo</a>
+						<a href="index.html">
+							<img src="assets/logo.svg" alt="Logo du film Retour vers le Future" class="drop-shadow-xl my-6 w-auto h-18" />
+						</a>
 					</div>
 
 					<div class="md:hidden flex justify-end col-span-6">
-						<button class="rounded-lg scale-125 btn btn-square btn-ghost">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block stroke-current w-7 h-7">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-							</svg>
+						<button id="mobile-menu-btn" class="rounded-lg scale-125 btn btn-square btn-ghost" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+							<img src="assets/burger.svg" alt="Ouvrir ou fermer le menu de navigation" class="inline-block w-7 h-7" />
 						</button>
 					</div>
 
 					<div class="hidden md:flex justify-end md:col-span-6">
-						<ul class="px-1 font-bold text-lg menu menu-horizontal">
-							<li><a href="index.html">Accueil</a></li>
-							<li><a href="tournage.html">Tournage</a></li>
+						<ul class="font-bold menu menu-horizontal">
+							<li><a href="index.html" class="px-4 text-2xl">Accueil</a></li>
+							<li><a href="tournage.html" class="px-4 text-2xl">Tournage</a></li>
 						</ul>
 					</div>
+				</div>
+
+				<div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+					<ul class="items-center w-full font-bold text-center menu">
+						<li class="w-full"><a href="index.html" class="justify-center py-3 border-gray-400 border-b-2 text-2xl">Accueil</a></li>
+						<li class="w-full"><a href="tournage.html" class="justify-center py-3 text-2xl">Tournage</a></li>
+					</ul>
 				</div>
 			</nav>
 
