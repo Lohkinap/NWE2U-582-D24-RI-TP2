@@ -1,23 +1,19 @@
-// == [ LISTENER ] =============================================================
+// == [ LISTENERS ] ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-	initModal();
 	initCounters();
+	initModal();
+	initNewsletter();
 	updateBackgroundPosition();
 });
 
 document.addEventListener('scroll', updateBackgroundPosition);
 document.addEventListener('resize', updateBackgroundPosition);
 
-// == [ FUNCTION ] =============================================================
+// == [ INIT ] ============================================================
 
-function updateBackgroundPosition() {
-	const INTENSITY = 90; // min = 0, max = 100
-
-	const scrollRatio = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-	const offset = scrollRatio * (INTENSITY * -1);
-
-	document.querySelector('.page__background').style.transform = `scale(1.3) translateY(${offset}px)`;
+function initCounters() {
+	document.querySelectorAll('.counter').forEach((counter) => animateCounter(counter));
 }
 
 function initModal() {
@@ -65,9 +61,52 @@ function initModal() {
 	});
 }
 
-function initCounters() {
-	document.querySelectorAll('.counter').forEach((counter) => animateCounter(counter));
+function initNewsletter() {
+	const form = document.getElementById('newsletter');
+	const input = document.getElementById('newsletter-email');
+	const successMsg = document.getElementById('newsletter-success');
+	const errorContainer = document.getElementById('newsletter-errors');
+
+	form.addEventListener('submit', (event) => {
+		event.preventDefault();
+
+		errorContainer.innerHTML = '';
+		const email = input.value;
+		const errors = [];
+
+		const hasValue = /\S/.test(email);
+		const hasValidPattern = /^[^@]+@[^@]+\.[^@]+$/.test(email);
+		const hasWhitespace = (email.match(/\s/g) || []).length > 0;
+
+		if (!hasValue) {
+			errors.push('Le champ est obligatoire');
+		} else if (!hasValidPattern) {
+			errors.push("Le format de l'adresse est invalide");
+		} else if (hasWhitespace) {
+			errors.push("Le champ ne doit pas contenir d'espaces");
+		}
+
+		const isValid = errors.length === 0;
+
+		if (!isValid) {
+			errors.forEach((error) => {
+				const p = document.createElement('p');
+				p.textContent = error;
+				errorContainer.appendChild(p);
+			});
+		}
+
+		errorContainer.classList.toggle('hidden', isValid);
+		successMsg.classList.toggle('hidden', !isValid);
+		input.classList.toggle('border-red-500', !isValid);
+
+		if (isValid) {
+			input.value = '';
+		}
+	});
 }
+
+// == [ FUNCTIONS ] ============================================================
 
 function animateCounter(element) {
 	const STEPS = 120;
@@ -93,4 +132,13 @@ function animateCounter(element) {
 
 		element.textContent = formattedValue + suffix;
 	}, INTERVAL);
+}
+
+function updateBackgroundPosition() {
+	const INTENSITY = 90; // min = 0, max = 100
+
+	const scrollRatio = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+	const offset = scrollRatio * (INTENSITY * -1);
+
+	document.querySelector('.page__background').style.transform = `scale(1.3) translateY(${offset}px)`;
 }
